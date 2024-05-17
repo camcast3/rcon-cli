@@ -19,11 +19,12 @@ import (
 	"log"
 	"os"
 
-	"github.com/itzg/rcon-cli/cli"
-	"github.com/spf13/cobra"
-	"github.com/spf13/viper"
 	"net"
 	"strconv"
+
+	"github.com/camcast3/rcon-cli/cli"
+	"github.com/spf13/cobra"
+	"github.com/spf13/viper"
 )
 
 var (

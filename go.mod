@@ -1,4 +1,4 @@
-module github.com/itzg/rcon-cli
+module github.com/camcast3/rcon-cli
 
 require (
 	github.com/james4k/rcon v0.0.0-20210222224819-34a67ca2b2d6

@@ -4,7 +4,7 @@ before:
     - go mod download
 release:
   github:
-    owner: itzg
+    owner: camcast3
     name: rcon-cli
 builds:
 - goos:
@@ -38,7 +38,7 @@ changelog:
       - '^docs:'
 dockers:
   - image_templates:
-      - "itzg/rcon-cli:{{ .Version }}-amd64"
+      - "camcast3/rcon-cli:{{ .Version }}-amd64"
     dockerfile: Dockerfile.release
     use: buildx
     goos: linux
@@ -46,7 +46,7 @@ dockers:
     build_flag_templates:
       - "--platform=linux/amd64"
   - image_templates:
-      - "itzg/rcon-cli:{{ .Version }}-ubuntu-amd64"
+      - "camcast3/rcon-cli:{{ .Version }}-ubuntu-amd64"
     dockerfile: Dockerfile.ubuntu
     use: buildx
     goos: linux
@@ -54,7 +54,7 @@ dockers:
     build_flag_templates:
       - "--platform=linux/amd64"
   - image_templates:
-      - "itzg/rcon-cli:{{ .Version }}-arm64"
+      - "camcast3/rcon-cli:{{ .Version }}-arm64"
     dockerfile: Dockerfile.release
     use: buildx
     goos: linux
@@ -62,7 +62,7 @@ dockers:
     build_flag_templates:
       - "--platform=linux/arm64"
   - image_templates:
-      - "itzg/rcon-cli:{{ .Version }}-ubuntu-arm64"
+      - "camcast3/rcon-cli:{{ .Version }}-ubuntu-arm64"
     dockerfile: Dockerfile.ubuntu
     use: buildx
     goos: linux
@@ -70,7 +70,7 @@ dockers:
     build_flag_templates:
       - "--platform=linux/arm64"
   - image_templates:
-      - "itzg/rcon-cli:{{ .Version }}-armv7"
+      - "camcast3/rcon-cli:{{ .Version }}-armv7"
     dockerfile: Dockerfile.release
     use: buildx
     goos: linux
@@ -79,7 +79,7 @@ dockers:
     build_flag_templates:
       - "--platform=linux/arm/v7"
   - image_templates:
-      - "itzg/rcon-cli:{{ .Version }}-ubuntu-armv7"
+      - "camcast3/rcon-cli:{{ .Version }}-ubuntu-armv7"
     dockerfile: Dockerfile.ubuntu
     use: buildx
     goos: linux
@@ -88,18 +88,18 @@ dockers:
     build_flag_templates:
       - "--platform=linux/arm/v7"
 docker_manifests:
-  - name_template: "itzg/rcon-cli:latest"
+  - name_template: "camcast3/rcon-cli:latest"
     image_templates:
-      - "itzg/rcon-cli:{{ .Version }}-amd64"
-      - "itzg/rcon-cli:{{ .Version }}-arm64"
-      - "itzg/rcon-cli:{{ .Version }}-armv7"
-  - name_template: "itzg/rcon-cli:{{ .Version }}"
+      - "camcast3/rcon-cli:{{ .Version }}-amd64"
+      - "camcast3/rcon-cli:{{ .Version }}-arm64"
+      - "camcast3/rcon-cli:{{ .Version }}-armv7"
+  - name_template: "camcast3/rcon-cli:{{ .Version }}"
     image_templates:
-      - "itzg/rcon-cli:{{ .Version }}-amd64"
-      - "itzg/rcon-cli:{{ .Version }}-arm64"
-      - "itzg/rcon-cli:{{ .Version }}-armv7"
-  - name_template: "itzg/rcon-cli:{{ .Version }}-ubuntu"
+      - "camcast3/rcon-cli:{{ .Version }}-amd64"
+      - "camcast3/rcon-cli:{{ .Version }}-arm64"
+      - "camcast3/rcon-cli:{{ .Version }}-armv7"
+  - name_template: "camcast3/rcon-cli:{{ .Version }}-ubuntu"
     image_templates:
-      - "itzg/rcon-cli:{{ .Version }}-ubuntu-amd64"
-      - "itzg/rcon-cli:{{ .Version }}-ubuntu-arm64"
-      - "itzg/rcon-cli:{{ .Version }}-ubuntu-armv7"
+      - "camcast3/rcon-cli:{{ .Version }}-ubuntu-amd64"
+      - "camcast3/rcon-cli:{{ .Version }}-ubuntu-arm64"
+      - "camcast3/rcon-cli:{{ .Version }}-ubuntu-armv7"
